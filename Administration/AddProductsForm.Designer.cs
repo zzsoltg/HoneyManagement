@@ -40,114 +40,154 @@
             productExpirationDateTimePicker = new DateTimePicker();
             button1 = new Button();
             button2 = new Button();
+            openImageButton = new Button();
+            pictureBox = new PictureBox();
+            openFileDialog = new OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(92, 56);
+            label1.Location = new Point(171, 119);
+            label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(39, 15);
+            label1.Size = new Size(78, 32);
             label1.TabIndex = 0;
             label1.Text = "Name";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(64, 82);
+            label2.Location = new Point(119, 175);
+            label2.Margin = new Padding(6, 0, 6, 0);
             label2.Name = "label2";
-            label2.Size = new Size(67, 15);
+            label2.Size = new Size(135, 32);
             label2.TabIndex = 1;
             label2.Text = "Description";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(95, 172);
+            label3.Location = new Point(176, 367);
+            label3.Margin = new Padding(6, 0, 6, 0);
             label3.Name = "label3";
-            label3.Size = new Size(36, 15);
+            label3.Size = new Size(70, 32);
             label3.TabIndex = 2;
             label3.Text = "Price:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(52, 200);
+            label4.Location = new Point(92, 427);
+            label4.Margin = new Padding(6, 0, 6, 0);
             label4.Name = "label4";
-            label4.Size = new Size(79, 15);
+            label4.Size = new Size(157, 32);
             label4.TabIndex = 3;
             label4.Text = "Packing Date:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(42, 229);
+            label5.Location = new Point(61, 484);
+            label5.Margin = new Padding(6, 0, 6, 0);
             label5.Name = "label5";
-            label5.Size = new Size(89, 15);
+            label5.Size = new Size(181, 32);
             label5.TabIndex = 4;
             label5.Text = "Expiration Date:";
             // 
-            // addProductNameTextBox
+            // productNameTextBox
             // 
-            productNameTextBox.Location = new Point(137, 53);
-            productNameTextBox.Name = "addProductNameTextBox";
-            productNameTextBox.Size = new Size(248, 23);
+            productNameTextBox.Location = new Point(254, 119);
+            productNameTextBox.Margin = new Padding(6, 6, 6, 6);
+            productNameTextBox.Name = "productNameTextBox";
+            productNameTextBox.Size = new Size(457, 39);
             productNameTextBox.TabIndex = 5;
             // 
-            // addProductDescriptionTextBox
+            // productDescriptionTextBox
             // 
-            productDescriptionTextBox.Location = new Point(137, 82);
+            productDescriptionTextBox.Location = new Point(255, 175);
+            productDescriptionTextBox.Margin = new Padding(6, 6, 6, 6);
             productDescriptionTextBox.Multiline = true;
-            productDescriptionTextBox.Name = "addProductDescriptionTextBox";
-            productDescriptionTextBox.Size = new Size(248, 76);
+            productDescriptionTextBox.Name = "productDescriptionTextBox";
+            productDescriptionTextBox.Size = new Size(457, 158);
             productDescriptionTextBox.TabIndex = 6;
             // 
-            // addProductPriceTextBox
+            // productPriceTextBox
             // 
-            productPriceTextBox.Location = new Point(137, 164);
-            productPriceTextBox.Name = "addProductPriceTextBox";
-            productPriceTextBox.Size = new Size(248, 23);
+            productPriceTextBox.Location = new Point(254, 360);
+            productPriceTextBox.Margin = new Padding(6, 6, 6, 6);
+            productPriceTextBox.Name = "productPriceTextBox";
+            productPriceTextBox.Size = new Size(457, 39);
             productPriceTextBox.TabIndex = 7;
             productPriceTextBox.TextChanged += ValidatePrice;
             // 
-            // addProductPackingDateTimePicker
+            // productPackingDateTimePicker
             // 
-            productPackingDateTimePicker.Location = new Point(137, 194);
-            productPackingDateTimePicker.Name = "addProductPackingDateTimePicker";
-            productPackingDateTimePicker.Size = new Size(248, 23);
+            productPackingDateTimePicker.Location = new Point(254, 422);
+            productPackingDateTimePicker.Margin = new Padding(6, 6, 6, 6);
+            productPackingDateTimePicker.Name = "productPackingDateTimePicker";
+            productPackingDateTimePicker.Size = new Size(457, 39);
             productPackingDateTimePicker.TabIndex = 8;
             // 
-            // addProductExpirationDateTimePicker
+            // productExpirationDateTimePicker
             // 
-            productExpirationDateTimePicker.Location = new Point(137, 223);
-            productExpirationDateTimePicker.Name = "addProductExpirationDateTimePicker";
-            productExpirationDateTimePicker.Size = new Size(248, 23);
+            productExpirationDateTimePicker.Location = new Point(254, 484);
+            productExpirationDateTimePicker.Margin = new Padding(6, 6, 6, 6);
+            productExpirationDateTimePicker.Name = "productExpirationDateTimePicker";
+            productExpirationDateTimePicker.Size = new Size(457, 39);
             productExpirationDateTimePicker.TabIndex = 9;
             // 
             // button1
             // 
             button1.DialogResult = DialogResult.Cancel;
-            button1.Location = new Point(111, 392);
+            button1.Location = new Point(206, 836);
+            button1.Margin = new Padding(6, 6, 6, 6);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(139, 49);
             button1.TabIndex = 10;
             button1.Text = "Cancel";
             button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            button2.Location = new Point(255, 392);
+            button2.Location = new Point(474, 836);
+            button2.Margin = new Padding(6, 6, 6, 6);
             button2.Name = "button2";
-            button2.Size = new Size(75, 23);
+            button2.Size = new Size(139, 49);
             button2.TabIndex = 11;
             button2.Text = "Save";
             button2.UseVisualStyleBackColor = true;
             // 
+            // openImageButton
+            // 
+            openImageButton.Location = new Point(66, 555);
+            openImageButton.Name = "openImageButton";
+            openImageButton.Size = new Size(183, 46);
+            openImageButton.TabIndex = 12;
+            openImageButton.Text = "Open image";
+            openImageButton.UseVisualStyleBackColor = true;
+            openImageButton.Click += openImageButton_Click;
+            // 
+            // pictureBox
+            // 
+            pictureBox.Location = new Point(255, 555);
+            pictureBox.Name = "pictureBox";
+            pictureBox.Size = new Size(456, 235);
+            pictureBox.TabIndex = 13;
+            pictureBox.TabStop = false;
+            // 
+            // openFileDialog
+            // 
+            openFileDialog.FileName = "openFileDialog";
+            // 
             // AddProductsForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(429, 450);
+            ClientSize = new Size(797, 960);
+            Controls.Add(pictureBox);
+            Controls.Add(openImageButton);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(productExpirationDateTimePicker);
@@ -160,8 +200,10 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(6, 6, 6, 6);
             Name = "AddProductsForm";
             Text = "AddProductsForm";
+            ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -180,5 +222,8 @@
         private DateTimePicker productExpirationDateTimePicker;
         private Button button1;
         private Button button2;
+        private Button openImageButton;
+        private PictureBox pictureBox;
+        private OpenFileDialog openFileDialog;
     }
 }
