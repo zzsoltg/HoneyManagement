@@ -43,6 +43,7 @@
             openImageButton = new Button();
             pictureBox = new PictureBox();
             openFileDialog = new OpenFileDialog();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             SuspendLayout();
             // 
@@ -99,7 +100,7 @@
             // productNameTextBox
             // 
             productNameTextBox.Location = new Point(254, 119);
-            productNameTextBox.Margin = new Padding(6, 6, 6, 6);
+            productNameTextBox.Margin = new Padding(6);
             productNameTextBox.Name = "productNameTextBox";
             productNameTextBox.Size = new Size(457, 39);
             productNameTextBox.TabIndex = 5;
@@ -107,7 +108,7 @@
             // productDescriptionTextBox
             // 
             productDescriptionTextBox.Location = new Point(255, 175);
-            productDescriptionTextBox.Margin = new Padding(6, 6, 6, 6);
+            productDescriptionTextBox.Margin = new Padding(6);
             productDescriptionTextBox.Multiline = true;
             productDescriptionTextBox.Name = "productDescriptionTextBox";
             productDescriptionTextBox.Size = new Size(457, 158);
@@ -116,7 +117,7 @@
             // productPriceTextBox
             // 
             productPriceTextBox.Location = new Point(254, 360);
-            productPriceTextBox.Margin = new Padding(6, 6, 6, 6);
+            productPriceTextBox.Margin = new Padding(6);
             productPriceTextBox.Name = "productPriceTextBox";
             productPriceTextBox.Size = new Size(457, 39);
             productPriceTextBox.TabIndex = 7;
@@ -125,7 +126,7 @@
             // productPackingDateTimePicker
             // 
             productPackingDateTimePicker.Location = new Point(254, 422);
-            productPackingDateTimePicker.Margin = new Padding(6, 6, 6, 6);
+            productPackingDateTimePicker.Margin = new Padding(6);
             productPackingDateTimePicker.Name = "productPackingDateTimePicker";
             productPackingDateTimePicker.Size = new Size(457, 39);
             productPackingDateTimePicker.TabIndex = 8;
@@ -133,7 +134,7 @@
             // productExpirationDateTimePicker
             // 
             productExpirationDateTimePicker.Location = new Point(254, 484);
-            productExpirationDateTimePicker.Margin = new Padding(6, 6, 6, 6);
+            productExpirationDateTimePicker.Margin = new Padding(6);
             productExpirationDateTimePicker.Name = "productExpirationDateTimePicker";
             productExpirationDateTimePicker.Size = new Size(457, 39);
             productExpirationDateTimePicker.TabIndex = 9;
@@ -141,8 +142,8 @@
             // button1
             // 
             button1.DialogResult = DialogResult.Cancel;
-            button1.Location = new Point(206, 836);
-            button1.Margin = new Padding(6, 6, 6, 6);
+            button1.Location = new Point(61, 839);
+            button1.Margin = new Padding(6);
             button1.Name = "button1";
             button1.Size = new Size(139, 49);
             button1.TabIndex = 10;
@@ -151,13 +152,14 @@
             // 
             // button2
             // 
-            button2.Location = new Point(474, 836);
-            button2.Margin = new Padding(6, 6, 6, 6);
+            button2.Location = new Point(313, 839);
+            button2.Margin = new Padding(6);
             button2.Name = "button2";
             button2.Size = new Size(139, 49);
             button2.TabIndex = 11;
             button2.Text = "Save";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += SaveProduct;
             // 
             // openImageButton
             // 
@@ -181,11 +183,23 @@
             // 
             openFileDialog.FileName = "openFileDialog";
             // 
+            // button3
+            // 
+            button3.Location = new Point(562, 839);
+            button3.Name = "button3";
+            button3.Size = new Size(150, 49);
+            button3.TabIndex = 14;
+            button3.Text = "Törlés";
+            button3.UseVisualStyleBackColor = true;
+            button3.Visible = false;
+            button3.Click += DeleteProduct;
+            // 
             // AddProductsForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(797, 960);
+            Controls.Add(button3);
             Controls.Add(pictureBox);
             Controls.Add(openImageButton);
             Controls.Add(button2);
@@ -200,9 +214,10 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Margin = new Padding(6, 6, 6, 6);
+            Margin = new Padding(6);
             Name = "AddProductsForm";
             Text = "AddProductsForm";
+            Load += Loaded;
             ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -225,5 +240,6 @@
         private Button openImageButton;
         private PictureBox pictureBox;
         private OpenFileDialog openFileDialog;
+        private Button button3;
     }
 }
