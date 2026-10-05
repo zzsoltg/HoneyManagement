@@ -20,7 +20,7 @@ namespace Administration
             var host = Host.CreateDefaultBuilder()
                 .ConfigureServices((context, services) =>
                 {
-                    services.AddSingleton<Common.Database.IDatabase, Common.Database.InMemoryDatabase>();
+                    services.AddSingleton<Common.Database.IDatabase, Common.Database.SqliteDatabase>();
                     services.AddTransient<DefaultForm>();
                     services.AddTransient<AddProductsForm>();
                 }).Build();
