@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="Administration/Administration.csproj" />
   <Project Path="Common/Common.csproj" Id="814b7842-72c6-4b82-ae18-16375dce82d4" />
+  <Project Path="Webshop/Webshop.csproj" Id="2ae96c01-6dd0-431a-af45-8d9c13b41a2a" />
 </Solution>
